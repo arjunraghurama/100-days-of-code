@@ -17,8 +17,9 @@ public:
     {
         if(root == NULL)
             return;
-        if(root != NULL)
-            runningSum+= root->val;
+        
+        runningSum+= root->val;
+        
         if(root->left == NULL && root->right == NULL)
         {
             results.push_back(runningSum);
