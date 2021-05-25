@@ -13,7 +13,6 @@ Output: "255[.]100[.]50[.]0"
 
 class defangingIpAddress_033 {
     public String defangIPaddr(String address) {
-        //return address.replace(".","[.]");
 
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < address.length(); i++) {
