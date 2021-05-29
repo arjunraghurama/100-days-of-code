@@ -73,3 +73,36 @@ public:
 
     }
 };
+
+/*
+Java solution 
+
+After first iteration of linkedlist, switch the tail to haed of second linked list.
+So in second iteration both the nodes meet at a point which is the intersection point.
+
+*/
+
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA == null || headB == null){
+            return null;
+        }
+        ListNode aWalker = headA;
+        ListNode bWalker = headB;
+        
+        while(aWalker != bWalker){
+            if(aWalker == null){
+                aWalker = headB;
+            } else{
+                aWalker = aWalker.next;
+            }
+            
+            if(bWalker == null){
+                bWalker = headA;
+            } else {
+                bWalker = bWalker.next;
+            }
+        }
+        return aWalker;     
+    }
+}
